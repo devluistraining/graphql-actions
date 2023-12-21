@@ -27,9 +27,11 @@ jobs:
     - name: Build Docker Image
       run: |
         docker build -t devluiszg/graphql-actions:0.0.1 .
+        docker build -t devluiszg/graphql-actions .
 
     - name: Push Docker Image
       run: |
         docker push devluiszg/graphql-actions:0.0.1
+        docker push devluiszg/graphql-actions
     #- name: Build the Docker image
       #run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
